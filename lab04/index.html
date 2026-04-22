@@ -1,0 +1,22 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <a-scene>
+        <a-box color="#FFF" position="0 .5 -4"></a-box>
+        <a-plane color="#000" position="0 0 -3" rotation="-90 0 0" width="10" height="10"></a-plane>
+        <a-entity light="type: point; color: #AFA; intensity: 1.5" position="-1 2 -2"></a-entity>
+
+        <a-sky color="#333"></a-sky>
+        
+    </a-scene>
+    <script type="module" src="/src/main.js"></script>
+    <a-light color="color: #333"></a-entity>
+    <a-light type="spot" position="0 2 0"></a-light>
+</body>
+</html>
