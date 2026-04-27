@@ -3,24 +3,39 @@
   <head>
     <meta charset="utf-8" />
     <title>Celestial Noir</title>
-     <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
   </head>
-  
   <body>
     <a-scene>
 
-      
+      <!-- LIGHTS -->
+      <a-light type="ambient" color="#ffffff" intensity="0.5"></a-light>
+      <a-light type="point" position="0 3.5 0" color="#f5c842" intensity="80" distance="100"></a-light>
+
+      <!-- ASSETS -->
+       <a-assets>
+        <img id="goldTex" src="./assets/texture/brushgoldtexture.png">
+        <img id="floortex" src="./assets/texture/wood_table_001_diff_4k.jpg">
+        <a-asset-item id="chandelier" src="./assets/objects/chandelier.glb"></a-asset-item>
+        <a-asset-item id="bookshelf" src="./assets/objects/victorian_bookshelf.glb"></a-asset-item>
+        <img id="img1" src="./assets/images/Bmark.jpg">
+        <img id="img2" src="./assets/images/Wmark.png">
+        <a-asset-item id="text" src="./assets/objects/cntext.glb"></a-asset-item>
+        
+      </a-assets>
+
+      <!-- SKY -->
       <a-sky color="#0a0f0a"></a-sky>
 
-      
+      <!-- FLOOR -->
       <a-plane
         position="0 0 0"
         rotation="-90 0 0"
         width="12" height="12"
-        color="#1a1f1a">
+        material="src: #floortex; repeat: 4 4; color: #6a4a2f; metalness: -1; roughness: 8">
       </a-plane>
 
-      
+      <!-- CEILING -->
       <a-plane
         position="0 4 0"
         rotation="90 0 0"
@@ -28,45 +43,100 @@
         color="#0d120d">
       </a-plane>
 
-      <!-- WALLS -->
-      
-      <a-box position="0 2 -6"   width="12" height="4" depth="0.1" color="#1c2b1c"></a-box>
-      <!-- Front wall (behind camera) -->
-      <a-box position="0 2 6"    width="12" height="4" depth="0.1" color="#1c2b1c"></a-box>
-      <!-- Left wall -->
-      <a-box position="-6 2 0"   width="0.1" height="4" depth="12" color="#1c2b1c"></a-box>
-      <!-- Right wall -->
-      <a-box position="6 2 0"    width="0.1" height="4" depth="12" color="#1c2b1c"></a-box>
-      
-      <!-- Logo sign-->
-      <a-plane
-        position="0 2.5 -5.8"
-        width="3" height="1"
-        color="#2d4a2d">
+      <!-- BACK WALL -->
+      <a-box position="0 2 -6.151" width="12" height="4" depth="0.1" color="#1c2b1c"></a-box>
+      <a-plane position="0 2 -6.1" width="12" height="4"
+        material="src: #goldTex; metalness: 1; roughness: 0.15; transparent: true; side: double">
       </a-plane>
 
-      <!-- center peniusula-->
-      pedestal -->
-      <a-box position="-3 0.6 -2" width="3.5" height="1.2" depth="0.8" color="#2a3a2a" rotation="0 90 0" depth="1.250"></a-box>
- 
+      <!-- FRONT WALL -->
+      <a-box position="0 2 6" width="12" height="4" depth="0.1" color="#1c2b1c"></a-box>
+      <a-plane position="0 2 5.99" rotation="0 180 0" width="12" height="4"
+        material="src: #goldTex; metalness: 1; roughness: 0.15; transparent: true; side: double">
+      </a-plane>
+
+      <!-- LEFT WALL -->
+      <a-box position="-3.118 2 0" width="0.1" height="4" depth="12" color="#1c2b1c"></a-box>
+      <a-plane position="-3.06 2 0" rotation="0 90 0" width="12" height="4"
+        material="src: #goldTex; metalness: 1; roughness: 0.15; transparent: true; side: double">
+      </a-plane>
+
+      <!-- RIGHT WALL -->
+      <a-box position="3.107 2 0" width="0.1" height="4" depth="12" color="#1c2b1c"></a-box>
+      <a-plane position="3.055 2 0" rotation="0 -90 0" width="12" height="4"
+        material="src: #goldTex; metalness: 1; roughness: 0.15; transparent: true; side: double">
+      </a-plane>
+
+      <!-- LOGO SIGN -->
+      <a-entity gltf-model="#text"
+          position="0 2.5 -6.078"
+          rotation="0 -45.180 0"
+          scale="0.040 0.040 0.04w0">
+      </a-entity>
+
+      <!-- PEDESTAL -->
+      
+      <!-- CHANDELIER -->
+     <a-entity
+        gltf-model="#chandelier"
+        position="0 2.806 0.741 3.178"
+        scale="0.500 0.500 0.500"
+        rotation="0 0 0">
+      </a-entity>
+        <!-- BOOKSHELF -->
+      <a-entity
+          gltf-model="#bookshelf"
+          position="-2.676 0.020 3.178 "
+          scale="1.400 1.400 1.400"
+          rotation="0 0 0">
+      </a-entity>
+
+      <a-entity
+          gltf-model="#bookshelf"
+          position="-2.676 0.020 -2.709"
+          scale="1.400 1.400 1.400"
+          rotation="0 0 0">
+      </a-entity>
+
+      <a-entity
+          gltf-model="#bookshelf"
+          position="2.669 0.020 -2.709 "
+          scale="1.400 1.400 1.400"
+          rotation="0 5939.080 0">
+      </a-entity>
+
+      <a-entity
+          gltf-model="#bookshelf"
+          position="2.669 0.020 3.179"
+          scale="1.400 1.400 1.400"
+          rotation="0 5939.080 0">
+      </a-entity>
+
+      <!-- WALL PANELS / ADS -->
+      <a-plane position="3.044 2.500 0.248"
+         rotation="0 -90 0"
+         width="1.360"
+         height="2.5"
+         material="src: #img2; side: double"
+          color:="#b8b8b8"
+          roughness="1"
+         ></a-plane>
+      
+      <a-plane position="-3.022 2.500 0.248"
+         rotation="0 90.010 0"
+         width="1.360" height="2.5"
+         material="src: #img1"
+         color:="#b8b8b8"
+         roughness="1"
+         ></a-plane>
+         
      
 
-      
-      <!-- advertisments -->
-      <a-plane position="-5.8 2 -2" rotation="0 90 0" width="3" height="2.5" color="#243324"></a-plane>
-      <a-plane position="-5.8 2 2"  rotation="0 90 0" width="3" height="2.5" color="#243324"></a-plane>
-      <a-plane position="5.8 2 -2"  rotation="0 -90 0" width="3" height="2.5" color="#243324"></a-plane>
-      <a-plane position="5.8 2 2"   rotation="0 -90 0" width="3" height="2.5" color="#243324"></a-plane>
+      <!-- CAMERA -->
+      <a-entity position="0 1.0 0">
+        <a-camera look-controls wasd-controls></a-camera>
+      </a-entity>
 
-      <!-- start -->
-      <a-scene>
-  <a-scene>
-  <a-entity id="player" position="0 1.6 0" wasd-controls="acceleration: 30">
-    <a-camera look-controls="pointerLockEnabled: true"></a-camera>
-  </a-entity>
-</a-scene>
-
-      <!-- Height -->
-   
+    </a-scene>
   </body>
 </html>
