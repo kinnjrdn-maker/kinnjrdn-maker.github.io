@@ -17,10 +17,11 @@
         <img id="goldTex" src="./assets/texture/brushgoldtexture.png">
         <img id="floortex" src="./assets/texture/wood_table_001_diff_4k.jpg">
         <a-asset-item id="chandelier" src="./assets/objects/chandelier.glb"></a-asset-item>
-        <a-asset-item id="bookshelf" src="./assets/objects/victorian_bookshelf.glb"></a-asset-item>
+        <a-asset-item id="bookshelf" src="./assets/objects/estante_-_bookcase.glb"></a-asset-item>
         <img id="img1" src="./assets/images/Bmark.jpg">
         <img id="img2" src="./assets/images/Wmark.png">
         <a-asset-item id="text" src="./assets/objects/cntext.glb"></a-asset-item>
+        <a-asset-item id="shelve" src="./assets/objects/shelve.glb"></a-asset-item>
         
       </a-assets>
 
@@ -48,6 +49,30 @@
       <a-plane position="0 2 -6.1" width="12" height="4"
         material="src: #goldTex; metalness: 1; roughness: 0.15; transparent: true; side: double">
       </a-plane>
+
+      <a-entity
+          gltf-model="#shelve"
+          position="-1.369 -0.865 -5.928"
+          rotation="0 60030.140 0"
+          scale="1.400 1.400 1.400"
+          rotation="0 0 0">
+      </a-entity>
+
+       <a-entity
+          gltf-model="#shelve"
+          position="-0.157 -0.865 -5.928"
+          rotation="0 60030.140 0"
+          scale="1.400 1.400 1.400"
+          rotation="0 0 0">
+      </a-entity>
+
+       <a-entity
+          gltf-model="#shelve"
+          position="1.425 -0.865 -5.928"
+          rotation="0 60030.140 0"
+          scale="1.400 1.400 1.400"
+          rotation="0 0 0">
+      </a-entity>
 
       <!-- FRONT WALL -->
       <a-box position="0 2 6" width="12" height="4" depth="0.1" color="#1c2b1c"></a-box>
@@ -87,29 +112,42 @@
       <a-entity
           gltf-model="#bookshelf"
           position="-2.676 0.020 3.178 "
-          scale="1.400 1.400 1.400"
-          rotation="0 0 0">
+          scale="4.470 2.550 1.540"
+          rotation="0 6030.890 0"
+          color="#b8b8b8"
+          roughness="1"
+          texture= "#floortex">
+
       </a-entity>
 
       <a-entity
           gltf-model="#bookshelf"
           position="-2.676 0.020 -2.709"
-          scale="1.400 1.400 1.400"
-          rotation="0 0 0">
+          rotation="0 6030.890 0"
+          color="#b8b8b8"
+          roughness="1"
+          texture= "#floortex">
+
       </a-entity>
 
       <a-entity
           gltf-model="#bookshelf"
           position="2.669 0.020 -2.709 "
-          scale="1.400 1.400 1.400"
-          rotation="0 5939.080 0">
+          rotation="0 6030.890 0"
+          color="#b8b8b8"
+          roughness="1"
+          texture= "#floortex">
+
       </a-entity>
 
       <a-entity
           gltf-model="#bookshelf"
           position="2.669 0.020 3.179"
-          scale="1.400 1.400 1.400"
-          rotation="0 5939.080 0">
+          rotation="0 6030.890 0"
+          color="#b8b8b8"
+          roughness="1"
+          texture= "#floortex">
+
       </a-entity>
 
       <!-- WALL PANELS / ADS -->
@@ -133,7 +171,7 @@
      
 
       <!-- CAMERA -->
-      <a-entity position="0 1.0 0">
+      <a-entity position="0 .5 0">
         <a-camera look-controls wasd-controls></a-camera>
       </a-entity>
 
