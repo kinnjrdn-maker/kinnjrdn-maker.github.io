@@ -1,288 +1,339 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Celestial Noir</title>
-    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
-  </head>
-  <body>
-    <a-scene>
+<head>
+  <meta charset="utf-8" />
+  <title>Celestial Noir</title>
+  <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+</head>
 
-      <!-- LIGHTS -->
-      <a-light type="ambient" color="#ffffff" intensity="0.5"></a-light>
-      <a-light type="point" position="0 3.5 0" color="#f5c842" intensity="80" distance="100"></a-light>
+<body>
+<a-scene>
 
-      <!-- ASSETS -->
-       <a-assets>
-        <img id="goldTex" src="./assets/texture/brushgoldtexture.png">
-        <img id="floortex" src="./assets/texture/wood_table_001_diff_4k.jpg">
-        <a-asset-item id="chandelier" src="./assets/objects/chandelier.glb"></a-asset-item>
-        <a-asset-item id="bookshelf" src="./assets/objects/Bookshelfgood.glb"></a-asset-item>
-        <img id="img1" src="./assets/images/Bmark.jpg">
-        <img id="img2" src="./assets/images/Wmark.png">
-        <a-asset-item id="text" src="./assets/objects/cntext.glb"></a-asset-item>
-        <a-asset-item id="shelve" src="./assets/objects/shelve.glb"></a-asset-item>
-        <a-asset-item id="Gate" src="./assets/objects/victorian_gate.glb"></a-asset-item>
-        <a-asset-item id="Desk" src="./assets/objects/game_ready_victorian_style_writing_desk.glb"></a-asset-item>
-        <a-asset-item id="Chair" src="./assets/objects/victorian_desk_chair.glb"></a-asset-item>
+  <!-- ASSETS -->
+  <a-assets>
 
-        <a-asset-item id="displaymid" src="./assets/objects/4ft_extra_view_display_case.glb"></a-asset-item>
-        <a-asset-item id="displaysider" src="./assets/objects/alternative_display_case.glb"></a-asset-item0>
-        <a-asset-item id="wall_lamp" src="./assets/objects/wall_lamp.glb"></a-asset-item>
-        <a-asset-item id="roof" src="./assets/objects/adobe_small_house_roof.glb"></a-asset-item>
-        <a-asset-item id="bush" src="./assets/objects/bush_square.glb"></a-asset-item0>
-        <a-asset-item id="lampoutside" src="./assets/objects/victorian_street_lamp.glb"></a-asset-item>
-        
-        
-      </a-assets>
+    <!-- TEXTURES -->
+    <img id="goldTex" src="./assets/texture/brushgoldtexture.png">
+    <img id="floortex" src="./assets/texture/wood_table_001_diff_4k.jpg">
 
+    <!-- IMAGES -->
+    <img id="img1" src="./assets/images/Bmark.jpg">
+    <img id="img2" src="./assets/images/Wmark.png">
 
-      </a-assets>
+    <!-- MODELS -->
+    <a-asset-item id="chandelier" src="./assets/objects/chandelier.glb"></a-asset-item>
 
-      </a-assets>
+    <a-asset-item id="bookshelf" src="./assets/objects/Bookshelfgood.glb"></a-asset-item>
 
-      </a-assets>
+    <a-asset-item id="text" src="./assets/objects/cntext.glb"></a-asset-item>
 
-      <!-- SKY -->
-      <a-sky color="87CEEB"></a-sky>
+    <a-asset-item id="shelve" src="./assets/objects/shelve.glb"></a-asset-item>
 
-      <!-- FLOOR -->
-      <a-plane
-        position="0 0 0"
-        rotation="-90 0 0"
-        width="12" height="12"
-        scale ="0.510 1 1"
-        material="src: #floortex; repeat: 4 4; color: #6a4a2f; metalness: -1; roughness: 8">
-      </a-plane>
+    <a-asset-item id="Gate" src="./assets/objects/victorian_gate.glb"></a-asset-item>
 
-      <!-- CEILING -->
-      <a-plane
-        position="0 4 0"
-        rotation="90 0 0"
-        width="12" height="12"
-        scale ="0.510 1 1"
-        color="#0d120d">
-      </a-plane>
+    <a-asset-item id="Desk" src="./assets/objects/game_ready_victorian_style_writing_desk.glb"></a-asset-item>
 
-       <!-- front desk -->
-      <a-entity
-      gltf-model="#Desk"
-      position="0 0 -3,771"
-      rotation="0 180,.00 0"
-      scale="1.530 1 1">
-      </a-entity> 
+    <a-asset-item id="Chair" src="./assets/objects/victorian_desk_chair.glb"></a-asset-item>
 
-      <!-- front desk chair -->
-      <a-entity
-      gltf-model="#Chair"
-      position="0 0 -5"
-      rotation="0 180 0"
-      scale="1 1 1">
-      </a-entity> 
+    <a-asset-item id="displaymid" src="./assets/objects/4ft_extra_view_display_case.glb"></a-asset-item>
 
-      <!-- front fence -->
-      <a-entity
-      gltf-model="#Gate"
-      position="-3.033 0.536 9.020"
-      rotation="0 90 0"
-      scale="0.005 0.005 0.005">
-      </a-entity> 
+    <a-asset-item id="displayside" src="./assets/objects/alternative_display_case.glb"></a-asset-item>
 
-      <a-entity
-      gltf-model="#Gate"
-      position="3.037 0.536 9.126"
-      rotation="0 180.00 0"
-      scale="0.005 0.005 0.005">
-      </a-entity> > 
+    <a-asset-item id="wall_lamp" src="./assets/objects/wall_lamp.glb"></a-asset-item>
 
-     <a-entity
-      gltf-model="#Gate"
-      position="3.037 0.536 9.120"
-      rotation="0 90.0 0"
-      scale="0.005 0.005 0.005">
-      </a-entity> 
+    <a-asset-item id="roof" src="./assets/objects/adobe_small_house_roof.glb"></a-asset-item>
 
-      <!-- LOGO Fence SIGN -->
-      <a-entity gltf-model="#text"
-          position="1.643 0.577 9.194"
-          rotation="0 -44.800 0"
-          scale="0.030 0.030 0.030">
-      </a-entity>
+    <a-asset-item id="bush" src="./assets/objects/bush_square.glb"></a-asset-item>
 
-      <!-- BACK WALL -->
-      <a-box position="0 2 -6.029" scale="0.520 1.070 1" width="12" height="4" depth="0.1" color="#1c2b1c"></a-box>
-      <a-plane position="0 2 -5.973" width="12" height="4" scale="0.520 1.070 1"
-        material="src: #goldTex; metalness: 1; roughness: 0.15; transparent: true; side: double">
-      </a-plane>
+    <a-asset-item id="lampoutside" src="./assets/objects/victorian_street_lamp.glb"></a-asset-item>
 
-      <!-- shelf -->
-       <a-entity
-          gltf-model="#shelve"
-          position="-0.157 -0.865 -5.928"
-          rotation="0 60030.140 0"
-          scale="1.400 1.400 2.900"
-          rotation="0 0 0">
-      </a-entity>
+    <a-asset-item id="shopfront" src="./assets/objects/victorian+shop+front.glb"></a-asset-item>
 
-      
+  </a-assets>
 
-      <!-- FRONT WALL -->
-      <a-entity
-      gltf-model="#shopfront"
-      position="-4.404 -0.000 6.066"
-      rotation="0 0 0"
-      scale="1.140 1.360 0.530">
-      </a-entity>
+  <!-- LIGHTS -->
+  <a-light type="ambient" color="#ffffff" intensity="0.5"></a-light>
 
-      <!-- LEFT WALL -->
-      <a-box position="-3.118 2 0" width="0.1" height="4" depth="12" color="#1c2b1c"></a-box>
-      <a-plane position="-3.06 2 0" rotation="0 90 0" width="12" height="4"
-        material="src: #goldTex; metalness: 1; roughness: 0.15; transparent: true; side: double">
-      </a-plane>
+  <a-light
+    type="point"
+    position="0 3.5 0"
+    color="#f5c842"
+    intensity="80"
+    distance="100">
+  </a-light>
 
-      <!-- RIGHT WALL -->
-      <a-box position="3.107 2 0" width="0.1" height="4" depth="12" color="#1c2b1c"></a-box>
-      <a-plane position="3.055 2 0" rotation="0 -90 0" width="12" height="4"
-        material="src: #goldTex; metalness: 1; roughness: 0.15; transparent: true; side: double">
-      </a-plane>
+  <!-- SKY -->
+  <a-sky color="#87CEEB"></a-sky>
 
-      <!-- LOGO SIGN -->
-      <a-entity gltf-model="#text"
-          position="0 2.5 -5.982"
-          rotation="0 -45.180 0"
-          scale="0.040 0.040 0.040">
-      </a-entity>
+  <!-- FLOOR -->
+  <a-plane
+    position="0 0 0"
+    rotation="-90 0 0"
+    width="12"
+    height="12"
+    scale="0.510 1 1"
+    material="src: #floortex; repeat: 4 4; color: #6a4a2f;">
+  </a-plane>
 
-      <!-- PEDESTAL -->
-      
-      <!-- CHANDELIER -->
-     <a-entity
-        gltf-model="#chandelier"
-        position="0 2.806 0.741 3.178"
-        scale="0.500 0.500 0.500"
-        rotation="0 0 0">
-      </a-entity>
-        <!-- BOOKSHELF -->
-      <a-entity
-          gltf-model="#bookshelf"
-          position="-0.434 0.020 9.288 "
-          scale="4.860 1.480 1.500"
-          rotation="0 6030.890 0"
-          color="#b8b8b8"
-          roughness="1"
-          texture= "#floortex">
+  <!-- CEILING -->
+  <a-plane
+    position="0 4 0"
+    rotation="90 0 0"
+    width="12"
+    height="12"
+    scale="0.510 1 1"
+    color="#0d120d">
+  </a-plane>
 
-      </a-entity>
+  <!-- FRONT DESK -->
+  <a-entity
+    gltf-model="#Desk"
+    position="0 0 -3.771"
+    rotation="0 180 0"
+    scale="1.530 1 1">
+  </a-entity>
 
-      <a-entity
-          gltf-model="#bookshelf"
-          position="-5.646 0.020 9.288"
-          scale="4.860 1.480 1.500"
-          rotation="0 6030.890 0"
-          color="#b8b8b8"
-          roughness="1"
-          texture= "#floortex">
+  <!-- FRONT DESK CHAIR -->
+  <a-entity
+    gltf-model="#Chair"
+    position="0 0 -5"
+    rotation="0 180 0"
+    scale="1 1 1">
+  </a-entity>
 
-      </a-entity>
+  <!-- FRONT GATES -->
+  <a-entity
+    gltf-model="#Gate"
+    position="-3.033 0.536 9.020"
+    rotation="0 90 0"
+    scale="0.005 0.005 0.005">
+  </a-entity>
 
-      <a-entity
-          gltf-model="#bookshelf"
-          position="2.669 0.020 -2.709 "
-          rotation="0 6030.890 0"
-          color="#b8b8b8"
-          roughness="1"
-          texture= "#floortex">
+  <a-entity
+    gltf-model="#Gate"
+    position="3.037 0.536 9.126"
+    rotation="0 180 0"
+    scale="0.005 0.005 0.005">
+  </a-entity>
 
-      </a-entity>
+  <a-entity
+    gltf-model="#Gate"
+    position="3.037 0.536 9.120"
+    rotation="0 90 0"
+    scale="0.005 0.005 0.005">
+  </a-entity>
 
-      <a-entity
-          gltf-model="#bookshelf"
-          position="2.669 0.020 3.179"
-          rotation="0 6030.890 0"
-          color="#b8b8b8"
-          roughness="1"
-          texture= "#floortex">
+  <!-- FRONT LOGO -->
+  <a-entity
+    gltf-model="#text"
+    position="1.643 0.577 9.194"
+    rotation="0 -44.800 0"
+    scale="0.030 0.030 0.030">
+  </a-entity>
 
-      </a-entity>
+  <!-- BACK WALL -->
+  <a-box
+    position="0 2 -6.029"
+    scale="0.520 1.070 1"
+    width="12"
+    height="4"
+    depth="0.1"
+    color="#1c2b1c">
+  </a-box>
 
-      <!-- WALL PANELS / ADS -->
-      <a-plane position="3.044 2.500 0.248"
-         rotation="0 -90 0"
-         width="1.360"
-         height="2.5"
-         material="src: #img2; side: double"
-          color:="#b8b8b8"
-          roughness="1"
-         ></a-plane>
-      
-      <a-plane position="-3.022 2.500 0.248"
-         rotation="0 90.010 0"
-         width="1.360" height="2.5"
-         material="src: #img1"
-         color:="#b8b8b8"
-         roughness="1"
-         ></a-plane>
+  <a-plane
+    position="0 2 -5.973"
+    width="12"
+    height="4"
+    scale="0.520 1.070 1"
+    material="src: #goldTex; side: double">
+  </a-plane>
 
-      <!-- displaymid -->    
+  <!-- SHELF -->
+  <a-entity
+    gltf-model="#shelve"
+    position="-0.157 -0.865 -5.928"
+    rotation="0 0 0"
+    scale="1.400 1.400 2.900">
+  </a-entity>
 
-     <a-entity
-  gltf-model="#displaymid"
-  position="0 0 -5"
-  rotation="0 180 0"
-  scale="1 1 1">
-    </a-entity>
+  <!-- SHOP FRONT -->
+  <a-entity
+    gltf-model="#shopfront"
+    position="-4.404 0 6.066"
+    rotation="0 0 0"
+    scale="1.140 1.360 0.530">
+  </a-entity>
 
-     <!-- displayside -->    
-         
-     <a-entity
-  gltf-model="#displayside"
-  position="0 0 -5"
-  rotation="0 180 0"
-  scale="1 1 1">
-    </a-entity>
+  <!-- LEFT WALL -->
+  <a-box
+    position="-3.118 2 0"
+    width="0.1"
+    height="4"
+    depth="12"
+    color="#1c2b1c">
+  </a-box>
 
-     <!-- wall lamp-->    
-         
-     <a-entity
-  gltf-model="#wall_lamp"
-  position="0 0 -5"
-  rotation="0 180 0"
-  scale="1 1 1">
-    </a-entity>
+  <a-plane
+    position="-3.06 2 0"
+    rotation="0 90 0"
+    width="12"
+    height="4"
+    material="src: #goldTex; side: double">
+  </a-plane>
 
-     <!-- roof-->    
-         
-     <a-entity
-  gltf-model="#roof"
-  position="0 0 -5"
-  rotation="0 180 0"
-  scale="1 1 1">
-    </a-entity>
+  <!-- RIGHT WALL -->
+  <a-box
+    position="3.107 2 0"
+    width="0.1"
+    height="4"
+    depth="12"
+    color="#1c2b1c">
+  </a-box>
 
-     <!-- bush -->    
-         
-     <a-entity
-  gltf-model="#bush"
-  position="0 0 -5"
-  rotation="0 180 0"
-  scale="1 1 1">
-    </a-entity>
+  <a-plane
+    position="3.055 2 0"
+    rotation="0 -90 0"
+    width="12"
+    height="4"
+    material="src: #goldTex; side: double">
+  </a-plane>
 
-     <!-- lamp outside -->    
-         
-     <a-entity
-  gltf-model="#lampoutside"
-  position="0 0 -5"
-  rotation="0 180 0"
-  scale="1 1 1">
-    </a-entity>
+  <!-- MAIN LOGO -->
+  <a-entity
+    gltf-model="#text"
+    position="0 2.5 -5.982"
+    rotation="0 -45.180 0"
+    scale="0.040 0.040 0.040">
+  </a-entity>
 
+  <!-- CHANDELIER -->
+  <a-entity
+    gltf-model="#chandelier"
+    position="0 2.806 0.741"
+    rotation="0 0 0"
+    scale="0.500 0.500 0.500">
+  </a-entity>
 
-      <!-- CAMERA -->
-      <a-entity position="0 .5 0">
-        <a-camera look-controls wasd-controls></a-camera>
-      </a-entity>
+  <!-- BOOKSHELVES -->
+  <a-entity
+    gltf-model="#bookshelf"
+    position="-0.434 0.020 9.288"
+    rotation="0 0 0"
+    scale="4.860 1.480 1.500">
+  </a-entity>
 
-    </a-scene>
-  </body>
+  <a-entity
+    gltf-model="#bookshelf"
+    position="-5.646 0.020 9.288"
+    rotation="0 0 0"
+    scale="4.860 1.480 1.500">
+  </a-entity>
+
+  <a-entity
+    gltf-model="#bookshelf"
+    position="2.669 0.020 -2.709"
+    rotation="0 0 0"
+    scale="4.860 1.480 1.500">
+  </a-entity>
+
+  <a-entity
+    gltf-model="#bookshelf"
+    position="2.669 0.020 3.179"
+    rotation="0 0 0"
+    scale="4.860 1.480 1.500">
+  </a-entity>
+
+  <!-- WALL ART -->
+  <a-plane
+    position="3.044 2.500 0.248"
+    rotation="0 -90 0"
+    width="1.360"
+    height="2.5"
+    material="src: #img2; side: double">
+  </a-plane>
+
+  <a-plane
+    position="-3.022 2.500 0.248"
+    rotation="0 90 0"
+    width="1.360"
+    height="2.5"
+    material="src: #img1; side: double">
+  </a-plane>
+
+  <!-- DISPLAY CASE -->
+  <a-entity
+    gltf-model="#displaymid"
+    position="0 0 1.913"
+    rotation="0 90 0"
+    scale="1.310 0.320 1.410">
+  </a-entity>
+
+  <!-- INDOOR LANTERNS -->
+  <a-entity
+    gltf-model="#wall_lamp"
+    position="-2.712 2.193 -0.894"
+    rotation="0 90 0"
+    scale="0.710 0.710 0.710">
+  </a-entity>
+
+  <a-entity
+    gltf-model="#wall_lamp"
+    position="2.543 2.193 -0.894"
+    rotation="0 90 0"
+    scale="0.710 0.710 0.710">
+  </a-entity>
+
+  <a-entity
+    gltf-model="#wall_lamp"
+    position="2.543 2.193 1.442"
+    rotation="0 90 0"
+    scale="0.710 0.710 0.710">
+  </a-entity>
+
+  <a-entity
+    gltf-model="#wall_lamp"
+    position="-2.712 2.193 1.442"
+    rotation="0 -90 0"
+    scale="0.710 0.710 0.710">
+  </a-entity>
+
+  <!-- OUTDOOR LAMP -->
+  <a-entity
+    gltf-model="#lampoutside"
+    position="-2.602 0.086 8.864"
+    rotation="0 90 0"
+    scale="0.003 0.003 0.003">
+  </a-entity>
+
+  <!-- ROOF -->
+  <a-entity
+    gltf-model="#roof"
+    position="0 3.841 -1.232"
+    rotation="0 90 0"
+    scale="0.015 0.003 -0.006">
+  </a-entity>
+
+  <!-- BUSHES -->
+  <a-entity
+    gltf-model="#bush"
+    position="1.001 0 8.309"
+    rotation="0 180 0"
+    scale="0.153 0.153 0.153">
+  </a-entity>
+
+  <a-entity
+    gltf-model="#bush"
+    position="2.186 0 8.309"
+    rotation="0 180 0"
+    scale="0.153 0.153 0.153">
+  </a-entity>
+
+  <!-- CAMERA -->
+  <a-entity position="0 0.5 0">
+    <a-camera look-controls wasd-controls></a-camera>
+  </a-entity>
+
+</a-scene>
+</body>
 </html>
