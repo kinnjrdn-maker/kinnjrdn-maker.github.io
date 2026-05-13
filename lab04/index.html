@@ -23,7 +23,7 @@
 
   <!-- ASSETS -->
   <a-assets>
-    <img id="woodTex" src="./finalproject/assets/texture/wood_table_001_diff_4k.jpg">
+    <img id="woodTex" src="assets/textures/stained_pine_diff_4k.jpg">
     <img id="wallTex" src="./assets/texture/brushgoldtexture.png">
   </a-assets>
 
@@ -111,9 +111,7 @@
     position="-3 0.3 -3.8"
     width="2.5"
     height="0.4"
-    depth="3.5"
-    color="#5b3a29"
-    shadow="cast: true; receive: true">
+    depth="3.5">
   </a-box>
 
   <!-- MATTRESS -->
@@ -148,11 +146,11 @@
 
   <!-- NIGHTSTAND -->
   <a-box
+   material="src: #woodTex; roughness: 1"
     position="-4.7 0.45 -4.8"
     width="0.8"
     height="0.9"
     depth="0.8"
-    color="#4a2d20"
     shadow="cast: true">
   </a-box>
 
@@ -177,11 +175,11 @@
 
   <!-- DESK TOP -->
   <a-box
+     material="src: #woodTex; roughness: 1"
     position="3 1 -4.7"
     width="2.2"
     height="0.15"
     depth="1"
-    color="#4b2e22"
     shadow="cast: true">
   </a-box>
 
@@ -249,11 +247,12 @@
 
   <!-- DRESSER -->
 <a-box
+ material="src: #woodTex; roughness: 1"
   position="2.3 0.8 -1"
   width="1.3"
   height="1.5"
   depth="0.8"
-  color="#6b4635"
+
   shadow="cast: true">
 </a-box>
 
@@ -312,11 +311,11 @@
 
   <!-- DOOR -->
   <a-box
+     material="src: #woodTex; roughness: 1"
     position="5.95 1.4 -4"
     width="0.08"
     height="2.8"
-    depth="1.3"
-    color="#5c3a28">
+    depth="1.3">
   </a-box>
 
   <!-- DOOR HANDLE -->
